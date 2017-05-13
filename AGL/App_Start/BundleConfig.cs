@@ -26,6 +26,17 @@ namespace AGL
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/knockoffjs").Include(
+          "~/Scripts/knockout-*"
+));
+
+            bundles.Add(new ScriptBundle("~/bundles/common").Include(
+                    "~/Scripts/movieAjax.js",
+                    "~/Scripts/common.js",
+                    "~/Scripts/movieCommonController.js"
+                    ));
+
         }
     }
 }
