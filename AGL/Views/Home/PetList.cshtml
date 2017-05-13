@@ -1,0 +1,26 @@
+﻿
+<div class="col-sm-9">
+    <div data-bind="foreach: customerModel.filteredPets()">
+        <div class="col-sm-12">
+            <div style="float: left">
+                <div class="">
+                    <ul class="panel panel-title">
+                        <li>
+                            <strong>Name:</strong>
+                            <span style="padding: 1px" data-bind="text: gender"></span>
+                            <ul>
+                                <li>
+                                    <div data-bind="foreach:$data.pets">
+                                        <div data-bind="foreach:$data">
+                                            <div data-bind="text:name"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

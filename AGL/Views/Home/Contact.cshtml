@@ -1,17 +1,20 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Test";
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
+<div class="alert alert-danger" data-bind="visible:model.gotError(),text:model.error()"></div>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<div class="panel panel-primary">
+    <div class="panel-heading">Pet Controller Function</div>
+    <div class="alert alert-info">For demo purpose I will show HTTP messages</div>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    <table class="table table-striped">
+        <tr>
+            <td>
+                <button data-bind="click:getPets">Get Pet (Cat) by the owner's gender</button>
+            </td>
+        </tr>
+    </table>
+
+</div>

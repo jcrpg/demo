@@ -32,9 +32,9 @@ namespace AGL
 ));
 
             bundles.Add(new ScriptBundle("~/bundles/common").Include(
-                    "~/Scripts/movieAjax.js",
+                    "~/Scripts/petAjax.js",
                     "~/Scripts/common.js",
-                    "~/Scripts/movieCommonController.js"
+                    "~/Scripts/petModel.js"
                     ));
 
         }

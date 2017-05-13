@@ -1,16 +1,26 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+@section scripts
+{
+<script src="~/Scripts/storeCustomerModel.js"></script>
+    <script src="~/Scripts/storeCustomerController.js"></script>
+}
+<div id="categories" class="col-xs-3">
+    <button class="btn btn-block btn-default btn-lg" data-bind="click:setCategory.bind(null)">Home</button>
+    <div data-bind="foreach:customerModel.petCategories()">
+        <button class="btn btn-block btn-default btn-lg" data-bind="click:setCategory.bind($data),text:$data,
+    css:{'btn-primary':$data == customerModel.selectedCategory()}
+    "></button>
+    </div>
 
-<div class="row">
-<div class="alert alert-success">
-    <span data-bind="text:modelData"></span>
-</div>
-    <button class="btn btn-primary" data-bind="click:sendRequest">
-        Send Request
-    </button>
-    <button class="btn btn-primary" data-bind="click:filterByCat">
-        Send Request
-    </button>
 
 </div>
+<div class="alert alert-danger col-sm-9"
+     data-bind="visible: model.gotError(), text: model.error()">
+</div>
+
+<div data-bind="visible:customerModel.currentView()=='list'">
+    @Html.Partial("PetList")
+</div>
+
