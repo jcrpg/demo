@@ -7,7 +7,9 @@
     <script src="~/Scripts/storeCustomerController.js"></script>
 }
 <div id="categories" class="col-xs-3">
-    <button class="btn btn-block btn-default btn-lg" data-bind="click:setCategory.bind(null)">Home</button>
+    <div class="panel panel-group">
+        <button  class="btn btn-block btn-default btn-lg" data-bind="click:setCategory.bind(null)">Show all</button>
+    </div>
     <div data-bind="foreach:customerModel.petCategories()">
         <button class="btn btn-block btn-default btn-lg" data-bind="click:setCategory.bind($data),text:$data,
     css:{'btn-primary':$data == customerModel.selectedCategory()}
@@ -19,7 +21,7 @@
 <div class="alert alert-danger col-sm-9"
      data-bind="visible: model.gotError(), text: model.error()">
 </div>
-
+<div class="modal-header">Display Cat type group by Gender</div>
 <div data-bind="visible:customerModel.currentView()=='list'">
     @Html.Partial("PetList")
 </div>

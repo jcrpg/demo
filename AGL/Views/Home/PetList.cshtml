@@ -4,15 +4,19 @@
         <div class="col-sm-12">
             <div style="float: left">
                 <div class="">
-                    <ul class="panel panel-title">
+                    <ul style="list-style: none;">
                         <li>
-                            <strong>Name:</strong>
+                            <strong>Gender:</strong>
                             <span style="padding: 1px" data-bind="text: gender"></span>
                             <ul>
-                                <li>
+                                <li style="list-style: none">
                                     <div data-bind="foreach:$data.pets">
                                         <div data-bind="foreach:$data">
-                                            <div data-bind="text:name"></div>
+                                            <ul>
+                                                <li>
+                                                    <div data-bind="text:name"></div>
+                                                </li>  
+                                            </ul>
                                         </div>
                                     </div>
                                 </li>
